@@ -22,12 +22,18 @@
     <header>
         <a href="/" class="header__logo" title="retour à l'accueil">logo</a>
 
-        <button type="button" id="toggle-menu__btn" aria-label="Afficher le menu de navigation"
+        <button type="button" class="navigation-toggler" id="open-menu__btn" aria-label="Afficher le menu de navigation"
             aria-controls="main-navigation" aria-expanded="false" title="Afficher le menu">
             <img src="assets/icons/menu.svg" alt="" aria-hidden="true">
         </button>
 
         <nav class="main-navigation" id="main-navigation">
+
+            <button type="button" class="navigation-toggler" id="close-menu__btn"
+                aria-label="Masquer le menu de navigation" aria-controls="main-navigation" aria-expanded="true"
+                title="Fermer le menu">
+                <img src="assets/icons/close.svg" aria-hidden="true" alt=""></button>
+
             <a href="#about" class="main-navigation__link">Découvrir</a>
             <a href="#products" class="main-navigation__link">Produits</a>
             <a href="#presentation" class="main-navigation__link">Présentation</a>
@@ -211,6 +217,8 @@
             </li>
         </ul>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 
 </html>

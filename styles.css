@@ -176,6 +176,7 @@ header {
 }
 
 .main-navigation {
+    position: relative;
     display: flex;
     gap: 16px;
 }
@@ -203,22 +204,41 @@ header {
     transform: scaleX(1);
 }
 
-#toggle-menu__btn {
+.navigation-toggler {
     width: 40px;
     display: none;
 }
 
-#toggle-menu__btn img {
+.navigation-toggler img {
     width: 100%;
 }
 
+#close-menu__btn {
+    position: absolute;
+    top: 16px;
+    right: 32px;
+}
+
 @media screen and (max-width: 770px) {
-    #toggle-menu__btn {
+    .navigation-toggler {
         display: block;
     }
 
     .main-navigation {
-        display: none;
+        position: absolute;
+        flex-direction: column;
+        padding: 32px;
+        align-items: center;
+        top: 0;
+        left: 0;
+        background: url(assets/images/navigation-bg.webp) repeat;
+        width: 100%;
+        transform: translateY(-100%);
+        transition: transform 0.2s ease-out;
+    }
+
+    .main-navigation--active {
+        transform: translateY(0);
     }
 }
 
@@ -244,7 +264,7 @@ header {
     max-width: 740px;
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 640px) {
     .hero-section p {
         margin-bottom: 80px;
     }
