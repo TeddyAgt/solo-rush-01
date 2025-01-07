@@ -354,6 +354,12 @@ header {
     font-size: var(--fz-24);
 }
 
+@media (pointer: coarse) {
+    .product-card .product-card__link {
+        opacity: 1;
+    }
+}
+
 @media screen and (max-width: 1000px) {
     .card-title {
         font-size: var(--fz-18);
