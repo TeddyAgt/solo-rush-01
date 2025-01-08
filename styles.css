@@ -245,7 +245,7 @@ header {
 /* hero section */
 .hero-section {
     height: 100vh;
-    padding: 96px 64px 0;
+    padding: 176px 64px 0;
     background: url(assets/images/hero-bg-3.jpg) center top / cover;
     display: flex;
     flex-direction: column;
@@ -267,6 +267,10 @@ header {
 @media screen and (max-width: 640px) {
     .hero-section p {
         margin-bottom: 80px;
+    }
+
+    .hero-section {
+        padding-top: 80px;
     }
 }
 
